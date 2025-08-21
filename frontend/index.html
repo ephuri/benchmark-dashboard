@@ -1,42 +1,10 @@
-<!DOCTYPE html>
-<html lang="zh-CN">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>CKPT Benchmark 可视化看板</title>
-    <link rel="stylesheet" href="css/style.css">
-</head>
-<body>
-    <div class="main-container">
-        <aside class="controls-panel">
-            <h2>控制面板</h2>
-            <div id="controls">
-                <h3>选择对比的CKPT:</h3>
-                <div id="ckpt-checkboxes">
-                    <p>正在加载数据...</p>
-                </div>
-                <!-- 新增：手动刷新按钮 -->
-                <div class="refresh-controls">
-                    <button id="refresh-btn" onclick="manualRefresh()">🔄 手动刷新数据</button>
-                    <div class="auto-refresh-status">
-                        <span id="status-text">自动刷新已开启</span>
-                        <button id="toggle-btn" onclick="toggleAutoRefresh()">暂停自动刷新</button>
-                    </div>
-                </div>
-            </div>
-        </aside>
-        <main class="charts-area">
-            <h1>CKPT Benchmark 可视化看板</h1>
-            <div id="charts">
-                <div id="bar-chart" class="chart-box"></div>
-                <div id="radar-chart" class="chart-box"></div>
-            </div>
-        </main>
+<aside class="controls-panel">
+    <h2>控制面板</h2>
+    <div id="controls">
+        <h3>选择对比的CKPT:</h3>
+        <div id="ckpt-checkboxes">
+            <p>正在加载数据...</p>
+        </div>
+        <!-- 这里原先的 refresh-controls 区域已经整个被删掉了 -->
     </div>
-
-    <!-- 引入 ECharts 库 -->
-    <script src="https://cdn.jsdelivr.net/npm/echarts@5.5.0/dist/echarts.min.js"></script>
-    <!-- 引入我们自己的JS逻辑文件 -->
-    <script src="js/app.js"></script>
-</body>
-</html>
+</aside>
